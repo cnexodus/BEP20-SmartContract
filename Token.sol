@@ -151,7 +151,7 @@ contract Ownable is Context {
     }
 }
 
-contract RemixGuitar is Context, IERC20, Ownable {
+contract DAO EXODUS is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -164,17 +164,17 @@ contract RemixGuitar is Context, IERC20, Ownable {
 
     uint8 private constant _decimals = 8;
     uint256 private constant MAX = ~uint256(0);
-    uint256 private _tTotal = 21000000 * 10 ** uint256(_decimals);
+    uint256 private _tTotal = 500000000 * 10 ** uint256(_decimals);
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
     uint256 private _tBurnTotal;
 
-    string private constant _name = 'Guitar Remix';
-    string private constant _symbol = 'GTR';
+    string private constant _name = 'DAO EXODUS';
+    string private constant _symbol = 'DAX';
 
     uint256 private _taxFee = 400;
     uint256 private _burnFee = 400;
-    uint private _max_tx_size = 21000000 * 10 ** uint256(_decimals);
+    uint private _max_tx_size = 500000000 * 10 ** uint256(_decimals);
 
     constructor () public {
         _rOwned[_msgSender()] = _rTotal;
